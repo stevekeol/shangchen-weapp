@@ -102,15 +102,10 @@ class Home extends Component {
   render () {
     return (
       <View className='index'>
-        {/*导航条可剥离出来*/}
-  
-        <Navbar>
-        </Navbar>
-
+        <Navbar bgColor="bg-gradual-blue" content="尚宸小管家"></Navbar>
         <View class="block-title">
           <Text class="title bg-gradual-blue">数据概览</Text>
         </View>
-
         <View class="radius shadow-warp bg-white margin-top">
           <View class="cu-list menu sm-border card-menu margin-top">
             <View class="cu-item">
@@ -135,7 +130,6 @@ class Home extends Component {
             </View>    
           </View> 
         </View>
-
         <View class="block-title margin-top-lg">
           <text class="title bg-gradual-blue light">小伙伴们</text>
         </View>
