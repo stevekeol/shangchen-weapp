@@ -10,6 +10,8 @@ import '../../components/main.wxss'
 
 import Navbar from '../../components/navbar/navbar'
 
+import level_diamond from '../../images/level_diamond.png'
+
 class Me extends Component {
 
   constructor(props) {
@@ -40,7 +42,7 @@ class Me extends Component {
             </View>
             <View class="memberCardLevel">
               <View class="icon">
-                <Image src="../../images/level_diamond.png"></Image>
+                <Image src={ level_diamond }></Image>
                 <View>钻石VIP</View>
               </View>
             </View>
