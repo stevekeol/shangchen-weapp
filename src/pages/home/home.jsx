@@ -12,6 +12,8 @@ import './home.scss'
 import '../../components/icon.wxss' //为什么此处导入的icon集合，在me.jsx中也能用
 import '../../components/main.wxss'
 
+import Navbar from '../../components/navbar/navbar.jsx'
+
 // import Login from '../../components/login/login' //测试ok
 // import GroupList from '../../components/groupList/groupList'
 
@@ -91,16 +93,8 @@ class Home extends Component {
     };
   }  
   
-
-  //当一个组件在被重新渲染时，这些方法将会被调用
-  componentWillReceiveProps (nextProps) {
-    // console.log(this.props, nextProps)
-  }
-  componentWillUnmount() {
-    console.log('123')
-  }
   componentDidMount() {
-    console.log('fuck')
+    // console.log('fuck')
   }
   componentDidShow() {}
   componentDidHide() {}
@@ -110,9 +104,8 @@ class Home extends Component {
       <View className='index'>
         {/*导航条可剥离出来*/}
   
-<navbar bgColor="bg-gradual-blue">
-  <view slot="content">尚宸小管家</view>
-</navbar>
+        <Navbar>
+        </Navbar>
 
         <View class="block-title">
           <Text class="title bg-gradual-blue">数据概览</Text>

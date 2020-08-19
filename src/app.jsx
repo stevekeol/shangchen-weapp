@@ -10,31 +10,49 @@ import './app.scss'
 const store = configStore()
 
 class App extends Component {
-  componentDidMount () {
-    console.log('获取系统状态栏信息:');
-    console.log(wx.getMenuButtonBoundingClientRect())
+  // constructor(props) {
+  //   super(props);
 
-    // 获取系统状态栏信息(如何提取出去？)
-    // wx.getSystemInfo({
-    //   success: e => {
-    //     console.log(e)
-    //     this.navBar.StatusBar = e.statusBarHeight;
-    //     let capsule = wx.getMenuButtonBoundingClientRect();
-    //     if (capsule) {
-    //       this.navBar.Custom = capsule;
-    //       this.navBar.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
-    //     } else {
-    //       this.navBar.CustomBar = e.statusBarHeight + 50;
-    //     }
-    //   }
-    // });    
-  }
+  //   this.state = {
+  //     StatusBar: 20,
+  //     CustomBar: 80,
+  //     Custom: {
+  //       bottom: 56,
+  //       height: 32,
+  //       left: 278,
+  //       right: 365,
+  //       top: 24,
+  //       width: 87
+  //     }      
+  //   }
 
-  componentDidShow () {}
+  //   this.getStatusBar() //this.state必须在该async/await操作之前
 
-  componentDidHide () {}
+  // }
 
-  componentDidCatchError () {}
+  // async getStatusBar() {
+  //   try {
+  //     let statusBar = {};
+  //     await wx.getSystemInfo({
+  //       success: e => {
+  //         this.state.StatusBar = e.statusBarHeight;
+  //         let capsule = wx.getMenuButtonBoundingClientRect();
+  //         if (capsule) {
+  //           this.state.Custom = capsule;
+  //           this.state.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+  //         } else {
+  //           this.state.CustomBar = e.statusBarHeight + 50;
+  //         }
+  //       }
+  //     });
+  //   } catch (err) {
+  //     throw new Error('failed getStatusBar');
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   console.log(this.state)
+  // }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
