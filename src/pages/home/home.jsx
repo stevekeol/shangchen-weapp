@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { View, Button, Text } from '@tarojs/components'
 
-// import { AtNavBar } from 'taro-ui' // 测试ok
-
-//导入将用于组件中dispatch的方法
-// import { add, minus, asyncAdd } from '../../actions/counter'
 
 import './home.scss'
 
@@ -12,10 +8,7 @@ import './home.scss'
 import '../../components/icon.wxss' //为什么此处导入的icon集合，在me.jsx中也能用
 import '../../components/main.wxss'
 
-import Navbar from '../../components/navbar/navbar.jsx'
-
-// import Login from '../../components/login/login' //测试ok
-// import GroupList from '../../components/groupList/groupList'
+import Navbar from '../../components/navbar/navbar'
 
 class Home extends Component {
 

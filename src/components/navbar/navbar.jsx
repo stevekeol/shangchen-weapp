@@ -87,4 +87,17 @@ class Navbar extends Component {
 
 export default Navbar
 
-/*------------------------------------------------------------*/
+/*------------------------------使用示例------------------------------
+0. 引入组件
+import Navbar from '../../components/navbar/navbar'
+
+1. 背景色，标题
+<Navbar bgColor="bg-gradual-blue" content="尚宸小管家"></Navbar>
+
+2. 背景色，标题，返回图标，返回文本
+<Navbar bgColor="bg-gradual-blue" content="尚宸小管家" isBack="true" backText="返回"></Navbar>
+
+3. 背景色，标题，返回图标，主页图标
+<Navbar bgColor="bg-gradual-blue" content="尚宸小管家" isCustom="true"></Navbar>
+
+---------------------------------------------------------------------*/
