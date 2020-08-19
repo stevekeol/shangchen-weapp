@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/me/me',
     'pages/home/home',
     'pages/index/index',
   ],
@@ -20,6 +21,11 @@ export default {
       text: "数据统计",
       iconPath: "./images/tabbar/data.png",
       selectedIconPath: "./images/tabbar/data_current.png"
+    }, {
+      pagePath: "pages/me/me",
+      text: "我",
+      iconPath: "./images/tabbar/me.png",
+      selectedIconPath: "./images/tabbar/me_current.png"      
     }, {
       pagePath: "pages/index/index",
       text: "我",
