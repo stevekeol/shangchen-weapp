@@ -183,7 +183,14 @@ class ClientList extends Component {
     Taro.navigateTo({
       url: '../clientInfo/clientInfo?userId=10001'
     })
-  }  
+  }
+
+  enterAddClient() {
+    console.log(this.state)
+    Taro.navigateTo({
+      url: '../addClient/addClient'
+    })
+  }   
 
   render () {
     return (
@@ -203,7 +210,7 @@ class ClientList extends Component {
                     </View>
                     <View class="action">
                     <View class={`cu-tag round bg-${this.state.status[Math.floor(Math.random() * 6)].color} light`}>{ this.state.status[Math.floor(Math.random() * 6)].title }</View>
-                      <View class="cu-tag round bg-grey light">{ item.contact.name }{index}</View>
+                      <View class="cu-tag round bg-grey light">{ item.contact.name }</View>
                     </View>
                   </View>
                 </View>
@@ -213,7 +220,7 @@ class ClientList extends Component {
         </View>
           
         <View class="add-fix-bottom">
-          <Image class="avatar" src={ addIcon } onClick={this.enterRegister}></Image>
+          <Image class="avatar" src={ addIcon } onClick={this.enterAddClient}></Image>
         </View>
 
       </View>

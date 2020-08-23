@@ -45,6 +45,18 @@ class Navbar extends Component {
     }
   }
 
+  backPage() {
+    Taro.navigateBack({
+      delta: 1
+    });
+  }
+
+  toHome(){
+    Taro.reLaunch({
+      url: '/pages/index/index',
+    })
+  }  
+
   render() {
     return (
       <View class='cu-custom' style={`height: ${this.state.CustomBar}px`} >
@@ -53,10 +65,10 @@ class Navbar extends Component {
           {
             this.props.isBack
             ? 
-              <View class='action' bindtap='BackPage'>
+              <View class='action' onClick={this.backPage}>
                 <Text class='cuIcon-back'></Text>
                   { this.props.content
-                    ?  <View slot="backText">{this.props.backText}</View>
+                    ?  <View slot="backText">{this.props.backText}</View> 
                     : null
                   }      
               </View>

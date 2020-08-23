@@ -275,7 +275,7 @@
   content: "\e6a0";
 }
 
-.cuIcon-right:before {
+.cuIcon-right:after {
   content: "\e6a3";
 }
 

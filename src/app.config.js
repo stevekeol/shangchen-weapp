@@ -1,9 +1,10 @@
 export default {
   pages: [
+    'pages/client/client',
+    'pages/addClient/addClient',
     'pages/me/me',
     'pages/home/home',
     'pages/index/index',
-    'pages/client/client',
     'pages/clientInfo/clientInfo',
   ],
   window: {

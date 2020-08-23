@@ -1,0 +1,63 @@
+.body {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.location {
+    font-weight: bold;
+    font-size: 28rpx;
+    opacity: .8;
+    margin-bottom: 30rpx;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;    
+}
+.tableContainer {
+    background-color: white;
+    border-radius: 20rpx;
+    width: 100%;
+    padding: 0 30rpx 0 30rpx;
+    margin-bottom: 30rpx;
+}
+
+/*好好学习*/
+.tableContainer .item {
+    height: 120rpx;
+    line-height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+}
+/*好好学习*/
+.tableContainer .item:not(:last-child) {
+    border-bottom: dashed #ddd 1rpx;
+}
+
+.tableContainer .item .name {
+    opacity: 0.8;
+}
+
+.tableContainer .item input {
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: right;
+}
+
+.tableContainer .desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;    
+}
+.button-lg {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #e54d42;
+    border-radius: 50rpx;
+    margin-top: 30rpx;
+    text-align: center;
+    color: white;
+    font-size: 32rpx
+}

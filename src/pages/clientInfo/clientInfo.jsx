@@ -78,7 +78,7 @@ class ClientInfo extends Component {
   render () {
     return (
       <View className='index'>
-        <Navbar bgColor="bg-gradual-green" content="客户列表" isBack="true" backText="返回"></Navbar>
+        <Navbar bgColor="bg-gradual-green" content="客户详情" isBack="true" backText="返回"></Navbar>
 
         <View class="body">
           <View class="orderContainer">
@@ -122,6 +122,7 @@ class ClientInfo extends Component {
             <View class="orderInfo">
               <View class="title addIcon">
                   <View class="name">跟进记录</View>
+                  <View class="state add cuIcon-right">新增</View>
               </View>
               <View class="records">
                 <View class="record">
