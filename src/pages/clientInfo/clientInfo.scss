@@ -1,0 +1,89 @@
+.body {
+  width: 90%;
+  // height: 100vh;
+  margin: 20px 5% 20px 5%;
+}
+
+.merchantInfo {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.merchantInfo .call{
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  border: solid 1px #1cbbb4;
+  border-radius: 30px;
+  text-align: center;
+  color: #1cbbb4;
+  box-shadow: 0 0 10px #1cbbb4;
+}
+
+.merchantInfo .name{
+  font-size: 32px;
+}
+
+.orderInfo {
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.orderInfo .title {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  line-height: 100px;
+  border-bottom: dashed #ddd 1px;
+}
+
+.orderInfo .title .name {
+  font-size: 32px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.orderInfo .title .state {
+  color: #fbbd08;
+}
+
+.orderInfo .items .item {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  line-height: 80px;
+}
+.orderInfo .items .item .name {
+    
+  opacity: 0.6; 
+}
+
+.orderInfo .items .item .value {
+  opacity: 0.8; 
+}
+
+.records .record {
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.records .record:not(:last-child) {
+  border-bottom: dashed #ddd 1px;
+}
+
+.records .meta{
+  display: flex;
+  justify-content: space-between;
+  // height: 100px;
+  // line-height: 100px;
+}
+.record .content {
+  margin: 20px 0;
+}

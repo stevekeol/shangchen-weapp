@@ -3,6 +3,8 @@ export default {
     'pages/me/me',
     'pages/home/home',
     'pages/index/index',
+    'pages/client/client',
+    'pages/clientInfo/clientInfo',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -25,12 +27,17 @@ export default {
       pagePath: "pages/me/me",
       text: "我",
       iconPath: "./images/tabbar/me.png",
-      selectedIconPath: "./images/tabbar/me_current.png"      
+      selectedIconPath: "./images/tabbar/list_current.png"      
     }, {
-      pagePath: "pages/index/index",
-      text: "我",
-      iconPath: "./images/tabbar/me.png",
-      selectedIconPath: "./images/tabbar/me_current.png"      
+      pagePath: "pages/client/client",
+      text: "客户列表",
+      iconPath: "./images/tabbar/list.png",
+      selectedIconPath: "./images/tabbar/list_current.png"      
     }]
   },
+  permission: {
+      "scope.userLocation": {
+          "desc": "获取用户的位置"
+      }
+  },  
 }
