@@ -24,12 +24,15 @@ class AddClient extends Component {
       address: '杭州市余杭区西园3幢3单元',
       phone: '15258800906',
       contact: '陈潘',
-
+      record: '',
       records: [
         {time: '2020-06-20 18:00', contact: '陈攀', content: '商讨价格与合同'},
         {time: '2020-06-20 18:00', contact: '陈攀', content: '商讨价格与合同'}
       ]
     };
+
+    this.getName = this.getName.bind(this);
+    this.changeData = this.changeData.bind(this);
   }  
   
   componentDidMount() {}
@@ -37,6 +40,14 @@ class AddClient extends Component {
   componentDidHide() {}
   getName(e) {
     console.log(e.detail.value);
+  }
+  //作用: 子页面中设置父页面后，保留父页面的原始数据
+  changeData() {
+    this.onLoad();
+  }
+  onShow() {
+    console.log("********")
+    console.log(this.state);
   }
 
   render () {

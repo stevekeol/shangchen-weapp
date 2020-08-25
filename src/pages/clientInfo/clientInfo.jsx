@@ -75,6 +75,13 @@ class ClientInfo extends Component {
     })
   }
 
+  addRecord() {
+    Taro.navigateTo({
+      url: '../addClientRecord/addClientRecord'
+    })
+  }
+
+
   render () {
     return (
       <View className='index'>
@@ -122,7 +129,7 @@ class ClientInfo extends Component {
             <View class="orderInfo">
               <View class="title addIcon">
                   <View class="name">跟进记录</View>
-                  <View class="state add cuIcon-right">新增</View>
+                  <View class="state add cuIcon-right" onClick={this.addRecord}>新增</View>
               </View>
               <View class="records">
                 <View class="record">

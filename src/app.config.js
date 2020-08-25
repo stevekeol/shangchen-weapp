@@ -6,6 +6,7 @@ export default {
     'pages/home/home',
     'pages/index/index',
     'pages/clientInfo/clientInfo',
+    'pages/addClientRecord/addClientRecord',
   ],
   window: {
     backgroundTextStyle: 'light',
