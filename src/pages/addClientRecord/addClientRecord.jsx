@@ -31,8 +31,6 @@ class AddClient extends Component {
 
 
   _saveHelpInfo(e) {
-    console.log('-============')
-    console.log(this)
     this.setState({
       record: e.detail.value
     })

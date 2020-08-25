@@ -7,9 +7,10 @@ import { add, minus, asyncAdd } from '../../actions/counter'
 import './index.scss'
 
 
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
+@connect(
+({ counter }) => ({ counter }), 
+
+(dispatch) => ({
   add () {
     dispatch(add())
   },
@@ -27,7 +28,10 @@ class Index extends Component {
 
   componentWillUnmount () { }
 
-  componentDidShow () { }
+  componentDidShow () { 
+    console.log('index.jsx:')
+    console.log(this.props)
+  }
 
   componentDidHide () { }
 

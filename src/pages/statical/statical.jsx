@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Button, Text } from '@tarojs/components'
 
 
-import './home.scss'
+import './statical.scss'
 
 //先集中导入colorUI的样式
 import '../../components/icon.wxss' //为什么此处导入的icon集合，在me.jsx中也能用
@@ -10,7 +10,7 @@ import '../../components/main.wxss'
 
 import Navbar from '../../components/navbar/navbar'
 
-class Home extends Component {
+class Statical extends Component {
 
   constructor(props) {
     super(props);
@@ -132,4 +132,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Statical

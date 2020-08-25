@@ -3,7 +3,7 @@ export default {
     'pages/client/client',
     'pages/addClient/addClient',
     'pages/me/me',
-    'pages/home/home',
+    'pages/statical/statical',
     'pages/index/index',
     'pages/clientInfo/clientInfo',
     'pages/addClientRecord/addClientRecord',
@@ -21,12 +21,12 @@ export default {
     backgroundColor: "#ffffff",
     borderStyle: "white",
     list: [{
-      pagePath: "pages/home/home",
+      pagePath: "pages/statical/statical",
       text: "数据统计",
       iconPath: "./images/tabbar/data.png",
       selectedIconPath: "./images/tabbar/data_current.png"
     }, {
-      pagePath: "pages/me/me",
+      pagePath: "pages/index/index",
       text: "我",
       iconPath: "./images/tabbar/me.png",
       selectedIconPath: "./images/tabbar/list_current.png"      
