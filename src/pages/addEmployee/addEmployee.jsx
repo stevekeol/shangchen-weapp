@@ -3,6 +3,7 @@ import Taro from '@tarojs/taro';
 import { View, Image, Text, Picker, Input, Switch } from '@tarojs/components';
 import Navbar from '../../components/navbar/navbar'
 import { formatTime  } from '../../utils/date.js'; //ES6风格的导入导出
+import { GROUPLIST  } from '../../utils/config.js'; //ES6风格的导入导出
 
 //先集中导入colorUI的样式
 import './addEmployee.scss'
@@ -14,33 +15,12 @@ class AddEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      groupList: [{
-        title: '超级管理员',
-        disable: true
-      }, {
-        title: '营销部管理员',
-        disable: true
-      }, {
-        title: '营销一部',
-        disable: false
-      }, {
-        title: '营销二部',
-        disable: false
-      }, {
-        title: '设计一部',
-        disable: false
-      }, {
-        title: '设计二部',
-        disable: false
-      }, {
-        title: '工程部',
-        disable: false
-      }],
+      groupList: GROUPLIST,
+      groupIndex: 2,
       name: '',
       phone: '',
       password: '',
-      group: 0, //????【待写】
-      role: '', //????【待写】
+      group: '',
       clients: [],
       createTime: '',
       updateTime: ''
@@ -50,7 +30,6 @@ class AddEmployee extends Component {
     this.getPhone = this.getPhone.bind(this);
     this.getPassword = this.getPassword.bind(this);
     this.onGroupChange = this.onGroupChange.bind(this);
-    this.onRoleChange = this.onRoleChange.bind(this);
 
     this.submit = this.submit.bind(this);
   }  
@@ -82,20 +61,15 @@ class AddEmployee extends Component {
 
   onGroupChange(e) {
     this.setState({
-      group: e.detail.value //?
+      groupIndex: e.detail.value,
+      group: this.state.groupList[e.detail.value].role
     })
   }
-
-  onRoleChange(e) {
-    this.setState({
-      role: e.detail.value
-    })
-  }  
 
   submit() {
     console.log(this.state);
     //网络请求【待写】
-    //1. 增加字段: createTime, contact(用me的objectId)
+    //1. 增加字段: createTime, updateTime, contact(用me的objectId)
     //2. 保存时还得根据手机号查询再保存
     //3. 成功后返回至父页面
   }
@@ -121,14 +95,9 @@ class AddEmployee extends Component {
             <View class="item">
               <View class="name">组别</View>
                 <Picker mode='selector' range={this.state.groupList} onChange={this.onGroupChange} range-key="title">
-                  <View class='state'>{this.state.groupList[this.state.group].title}</View>
+                  <View class='state'>{this.state.groupList[this.state.groupIndex].title}</View>
                 </Picker>
             </View>
-
-            <View class="item">
-              <View class="name">组长</View>
-              <Switch onChange={this.onRoleChange} />
-            </View>          
           </View>
 
           <View class="button-lg" onClick={this.submit}>保存</View>

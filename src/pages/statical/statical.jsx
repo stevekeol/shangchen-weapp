@@ -9,6 +9,7 @@ import '../../components/icon.wxss' //为什么此处导入的icon集合，在me
 import '../../components/main.wxss'
 
 import Navbar from '../../components/navbar/navbar'
+import GroupList from '../../components/groupList/groupList'
 
 class Statical extends Component {
   constructor(props) {
@@ -85,9 +86,7 @@ class Statical extends Component {
     };
   }  
   
-  componentDidMount() {
-    // console.log('fuck')
-  }
+  componentDidMount() {}
   componentDidShow() {}
   componentDidHide() {}
 
@@ -125,6 +124,10 @@ class Statical extends Component {
         <View class="block-title margin-top-lg">
           <text class="title bg-gradual-blue light">小伙伴们</text>
         </View>
+
+        {
+          this.state.employees.map((item, index) => <GroupList groupData={ item } groupName={ item[0].group } key={ index } />)
+        }
 
       </View>
     )

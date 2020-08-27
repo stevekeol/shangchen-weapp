@@ -3,6 +3,7 @@ import Taro from '@tarojs/taro';
 import { View, Image, Text, Picker, Input, Textarea } from '@tarojs/components';
 import Navbar from '../../components/navbar/navbar'
 import { formatTime  } from '../../utils/date.js'; //ES6风格的导入导出
+import { STATUSLIST  } from '../../utils/config.js';
 
 //先集中导入colorUI的样式
 import './addClient.scss'
@@ -14,8 +15,9 @@ class AddClient extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      statusList: ['意向', '定金', '设计', '转合同', '施工', '完结'],
-      status: 0, //0-5
+      statusList: STATUSLIST,
+      statusIndex: 0, //0-5
+      status: '',
       name: '',
       phone: '',
       address: '',
@@ -61,7 +63,8 @@ class AddClient extends Component {
 
   onStatusChange(e) {
     this.setState({
-      status: e.detail.value
+      status: this.state.statusList[e.detail.value].value,
+      statusIndex: e.detail.value
     })
   }
 
@@ -103,8 +106,8 @@ class AddClient extends Component {
             </View>
             <View class="item">
               <View class="name">状态</View>
-                <Picker mode='selector' range={this.state.statusList} onChange={this.onStatusChange}>
-                  <View class='state'>{this.state.statusList[this.state.status]}</View>
+                <Picker mode='selector' range={this.state.statusList} onChange={this.onStatusChange} range-key="title">
+                  <View class='state'>{this.state.statusList[this.state.statusIndex].title}</View>
                 </Picker>
             </View>
           </View>

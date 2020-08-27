@@ -11,6 +11,7 @@ import '../../components/main.wxss'
 import Navbar from '../../components/navbar/navbar'
 
 import level_diamond from '../../images/level_diamond.png'
+import avator from '../../images/avator.jpg'
 
 class Me extends Component {
 
@@ -30,7 +31,7 @@ class Me extends Component {
       <View>
         <Navbar bgColor="bg-blue" content="张杰"></Navbar>
         <View class="backgroundHead">
-          <Image class="avatar" src="https://shp.qpic.cn/cfwebcap/0/d0a02c5f86d40c0fae24ae56eea587e0/" mode="scaleToFill"></Image>
+          <Image class="avatar" src={avator} mode="scaleToFill"></Image>
         </View>
 
         <View class="body margin-top-xl">

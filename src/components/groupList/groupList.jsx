@@ -1,16 +1,17 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Input } from '@tarojs/components'
+import React, { Component } from 'react'
+import { View, Text, Image } from '@tarojs/components'
 
 import '../main.wxss'
 import '../icon.wxss'
 import './groupList.scss'
+import avator from '../../images/avator.jpg'
+
 
 class GroupList extends Component {
   constructor(props) {
     super(props)
-    console.log(this.props)
     this.state = {}
-  } 
+  }
   componentDidMount() {}
   render() {
     return (
@@ -23,19 +24,20 @@ class GroupList extends Component {
             </View>  
             <View class="cu-list menu-avatar">        
               {
-                this.props.groupData.map(item => {
+                this.props.groupData.map((item, index) => {
                   return (
-                    <View class="cu-item">
-                      <View class="cu-avatar round" style="background-image:url('https://shp.qpic.cn/cfwebcap/0/d0a02c5f86d40c0fae24ae56eea587e0/');"></View>
+                    <View class="cu-item" key={index}>
+                      <Image class="cu-avatar round" src={avator} mode="scaleToFill"></Image>
                       <View class="content">
                         <View class="text-grey">{ item.name }{ item.role == 'leader' ? '【组长】' : '' }</View>
                         <View class="text-gray text-sm">
-                          <text class="text-red"></text>{ item.phone }</View>
+                          <Text class="text-red"></Text>{ item.phone }
+                        </View>
                       </View>
                       <View class="action">
-                        <View class="cu-tag round bg-cyan light sm">成交{ item.deal.length || 0 }人</View>
+                        <View class="cu-tag round bg-cyan light sm">成交{ 1 || 0 }人</View>
                       </View>      
-                    </View>            
+                    </View>
                   )
                 })
               }
