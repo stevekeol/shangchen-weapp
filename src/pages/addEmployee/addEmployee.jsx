@@ -1,36 +1,57 @@
 import React, { Component } from 'react';
 import Taro from '@tarojs/taro';
-import { View, Image, Text, Picker, Input, Textarea } from '@tarojs/components';
+import { View, Image, Text, Picker, Input, Switch } from '@tarojs/components';
 import Navbar from '../../components/navbar/navbar'
 import { formatTime  } from '../../utils/date.js'; //ES6风格的导入导出
 
 //先集中导入colorUI的样式
-import './addClient.scss'
+import './addEmployee.scss'
 import '../../components/icon.wxss' //为什么此处导入的icon集合，在me.jsx中也能用
 import '../../components/main.wxss'
 
 
-class AddClient extends Component {
+class AddEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      statusList: ['意向', '定金', '设计', '转合同', '施工', '完结'],
-      status: 0, //0-5
+      groupList: [{
+        title: '超级管理员',
+        disable: true
+      }, {
+        title: '营销部管理员',
+        disable: true
+      }, {
+        title: '营销一部',
+        disable: false
+      }, {
+        title: '营销二部',
+        disable: false
+      }, {
+        title: '设计一部',
+        disable: false
+      }, {
+        title: '设计二部',
+        disable: false
+      }, {
+        title: '工程部',
+        disable: false
+      }],
       name: '',
       phone: '',
-      address: '',
-      record: {
-        createTime: '',
-        content: ''
-      },
-      contact: '', //employeeModel中返回的“我的”中的ObjectId
+      password: '',
+      group: 0, //????【待写】
+      role: '', //????【待写】
+      clients: [],
+      createTime: '',
+      updateTime: ''
     };
 
     this.getName = this.getName.bind(this);
     this.getPhone = this.getPhone.bind(this);
-    this.getAddress = this.getAddress.bind(this);
-    this.onStatusChange = this.onStatusChange.bind(this);
-    this.getRecord = this.getRecord.bind(this);
+    this.getPassword = this.getPassword.bind(this);
+    this.onGroupChange = this.onGroupChange.bind(this);
+    this.onRoleChange = this.onRoleChange.bind(this);
+
     this.submit = this.submit.bind(this);
   }  
   
@@ -42,37 +63,34 @@ class AddClient extends Component {
   getName(e) {
     this.setState({
       name: e.detail.value
-    })    
+    })
   }
 
   getPhone(e) {
     ////检测该手机号是否已被录入【待写】
-    // e.detail.value.length === 11 &&    
+    // e.detail.value.length === 11 &&
     this.setState({
       phone: e.detail.value
     })
   }
 
-  getAddress(e) {
+  getPassword(e) {
     this.setState({
-      address: e.detail.value
+      password: e.detail.value
     })
   }
 
-  onStatusChange(e) {
+  onGroupChange(e) {
     this.setState({
-      status: e.detail.value
+      group: e.detail.value //?
     })
   }
 
-  getRecord(e) {
+  onRoleChange(e) {
     this.setState({
-      record: {
-        createTime: formatTime(new Date()),
-        content: e.detail.value
-      }
+      role: e.detail.value
     })
-  }
+  }  
 
   submit() {
     console.log(this.state);
@@ -85,9 +103,8 @@ class AddClient extends Component {
   render () {
     return (
       <View className='index'>
-        <Navbar bgColor="bg-gradual-green" content="新增客户" isBack="true" backText="返回"></Navbar>
+        <Navbar bgColor="bg-gradual-green" content="员工录入" isBack="true" backText="返回"></Navbar>
         <View class="body">
-          <Text class="title">基本信息</Text>
           <View class="tableContainer">
             <View class="item">
               <View class="name">姓名</View>
@@ -98,25 +115,27 @@ class AddClient extends Component {
               <Input placeholder="此处输入" onBlur={this.getPhone} type="number" maxlength="11" value={ this.state.phone }></Input>
             </View>
             <View class="item">
-              <View class="name">地址</View>
-              <Input placeholder="此处输入" onBlur={this.getAddress} maxlength="50" value={ this.state.address }></Input>
+              <View class="name">密码</View>
+              <Input placeholder="此处输入" onBlur={this.getPassword} maxlength="20" value={ this.state.password }></Input>
             </View>
             <View class="item">
-              <View class="name">状态</View>
-                <Picker mode='selector' range={this.state.statusList} onChange={this.onStatusChange}>
-                  <View class='state'>{this.state.statusList[this.state.status]}</View>
+              <View class="name">组别</View>
+                <Picker mode='selector' range={this.state.groupList} onChange={this.onGroupChange} range-key="title">
+                  <View class='state'>{this.state.groupList[this.state.group].title}</View>
                 </Picker>
             </View>
+
+            <View class="item">
+              <View class="name">组长</View>
+              <Switch onChange={this.onRoleChange} />
+            </View>          
           </View>
 
-          <Text class="title">备忘笔记</Text>
-          <Textarea class="record" onBlur={this.getRecord} value={this.state.record.content} placeholder="(选填)" />
-
-          <View class="button-lg" onClick={this.submit}>保存</View>  
+          <View class="button-lg" onClick={this.submit}>保存</View>
         </View>
       </View>
     )
   }
 }
 
-export default AddClient
+export default AddEmployee

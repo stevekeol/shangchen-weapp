@@ -11,7 +11,6 @@ import '../../components/main.wxss'
 import Navbar from '../../components/navbar/navbar'
 
 class Statical extends Component {
-
   constructor(props) {
     super(props);
     this.state = {

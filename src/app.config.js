@@ -6,7 +6,7 @@ export default {
     'pages/statical/statical',
     'pages/index/index',
     'pages/clientInfo/clientInfo',
-    'pages/addClientRecord/addClientRecord',
+    'pages/addEmployee/addEmployee',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -26,7 +26,7 @@ export default {
       iconPath: "./images/tabbar/data.png",
       selectedIconPath: "./images/tabbar/data_current.png"
     }, {
-      pagePath: "pages/index/index",
+      pagePath: "pages/addEmployee/addEmployee",
       text: "我",
       iconPath: "./images/tabbar/me.png",
       selectedIconPath: "./images/tabbar/list_current.png"      
