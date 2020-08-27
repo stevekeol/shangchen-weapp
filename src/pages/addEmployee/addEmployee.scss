@@ -62,3 +62,43 @@
     color: white;
     font-size: 32rpx
 }
+
+.wx-switch-input {
+    width: 80rpx !important;
+    height: 40rpx !important;
+}
+.wx-switch-input::before {
+    width: 40rpx !important;
+    height: 37rpx !important;
+}
+.wx-switch-input::after {
+    width: 56rpx !important;
+    height: 37rpx !important;
+}
+.tip {
+    opacity: 0.5;
+    font-size: 20rpx;
+}
+
+// checkbox多选、
+.checkbox {
+    width: 100%;
+    height: 60rpx;
+    margin-top: 20rpx; 
+}
+
+.checkbox .checkbox-label {
+    opacity: 0.8;
+    margin-right: 30rpx;
+    color: red;
+}
+.checkbox .checkbox-checkbox {
+    margin-right: 30rpx;
+    color: blue
+}
+
+.wx-checkbox-input {
+    width: 34rpx;
+    height: 34rpx;
+    border-radius: 50%;
+}

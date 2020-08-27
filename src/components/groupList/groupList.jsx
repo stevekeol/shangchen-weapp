@@ -35,7 +35,7 @@ class GroupList extends Component {
                         </View>
                       </View>
                       <View class="action">
-                        <View class="cu-tag round bg-cyan light sm">成交{ 1 || 0 }人</View>
+                        <View class="cu-tag round bg-cyan light sm">定金{ 1 || 0 }人</View>
                       </View>      
                     </View>
                   )

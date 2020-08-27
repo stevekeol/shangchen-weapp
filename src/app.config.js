@@ -1,12 +1,12 @@
 export default {
   pages: [
+    'pages/addEmployee/addEmployee',
+    'pages/statical/statical',
     'pages/client/client',
     'pages/addClient/addClient',
     'pages/me/me',
-    'pages/statical/statical',
     'pages/index/index',
     'pages/clientInfo/clientInfo',
-    'pages/addEmployee/addEmployee',
   ],
   window: {
     backgroundTextStyle: 'light',

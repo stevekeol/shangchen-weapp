@@ -1,20 +1,27 @@
 /*************************************
- * 【配置新增员工的类别】
+ * 【配置新增员工的权限】
+ * 涉及页面: statical.jsx, addEmployee.jsx
+ ************************************/
+export const ADMIN = {
+  phone: '13551648321',
+  name: '何亮',
+  password: 'hl@shangchen'
+}
+export const SUB_ADMIN = {
+  phone: '18308363494',
+  name: '陈潘',
+  password: 'cp@shangchen'
+}
+
+/*************************************
+ * 【配置新增员工的部门】
  * 涉及页面: addEmployee.jsx
  ************************************/
 export const GROUPLIST = [
   {
-    title: '超级管理员',
-    role: 'superAdmin'
-  }, 
-  {
-    title: '营销部管理员',
-    role: 'saleAdmin'
-  }, 
-  {
     title: '营销一部',
     role: 'saleOne'
-  }, 
+  },
   {
     title: '营销二部',
     role: 'saleTwo'
