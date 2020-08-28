@@ -101,7 +101,7 @@ const employees = [{
   password: 'cp_2020',
   avatorUrl: undefined,
   openid: undefined,
-  group: 'saleAdmin',
+  groups: 'saleAdmin',
   createTime: '2020-05-17 18:30',
   updateTime: '2020-05-20 19:30',
   clients: []
@@ -111,7 +111,19 @@ const employees = [{
   password: 'dm_2020',
   avatorUrl: undefined,
   openid: undefined,
-  group: 'saleAdmin',
+  groups: ['saleOne'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+}, {
+  name: '聂碧清',
+  phone: 15984441339,
+  password: 'nbq_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['saleTwo'],
+  isAdmin: true,
   createTime: '2020-05-17 18:30',
   updateTime: '2020-05-20 19:30',
   clients: []

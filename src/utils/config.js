@@ -20,23 +20,23 @@ export const SUB_ADMIN = {
 export const GROUPLIST = [
   {
     title: '营销一部',
-    role: 'saleOne'
+    value: 'saleOne'
   },
   {
     title: '营销二部',
-    role: 'saleTwo'
+    value: 'saleTwo'
   }, 
   {
     title: '设计一部',
-    role: 'designOne'
+    value: 'designOne'
   }, 
   {
     title: '设计二部',
-    role: 'designTwo'
+    value: 'designTwo'
   }, 
   {
     title: '工程部',
-    role: 'project'
+    value: 'project'
   }
 ];
 

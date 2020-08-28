@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
@@ -211,7 +209,7 @@ class ClientList extends Component {
                       <Text class="text-grey">{ item.phone }</Text>
                     </View>
                     <View class="action">
-                    <View class={`cu-tag round bg-${this.state.status[Math.floor(Math.random() * 6)].color} light`}>{ this.state.status[Math.floor(Math.random() * 6)].title }</View>
+                      <View class={`cu-tag round bg-${this.state.status[Math.floor(Math.random() * 6)].color} light`}>{ this.state.status[Math.floor(Math.random() * 6)].title }</View>
                       <View class="cu-tag round bg-grey light">{ item.contact.name }</View>
                     </View>
                   </View>

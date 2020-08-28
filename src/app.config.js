@@ -1,7 +1,7 @@
 export default {
   pages: [
-    'pages/addEmployee/addEmployee',
     'pages/statical/statical',
+    'pages/addEmployee/addEmployee',
     'pages/client/client',
     'pages/addClient/addClient',
     'pages/me/me',
@@ -26,7 +26,7 @@ export default {
       iconPath: "./images/tabbar/data.png",
       selectedIconPath: "./images/tabbar/data_current.png"
     }, {
-      pagePath: "pages/addEmployee/addEmployee",
+      pagePath: "pages/me/me",
       text: "我",
       iconPath: "./images/tabbar/me.png",
       selectedIconPath: "./images/tabbar/list_current.png"      
