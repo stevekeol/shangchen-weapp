@@ -19,12 +19,8 @@ export const SUB_ADMIN = {
  ************************************/
 export const GROUPLIST = [
   {
-    title: '营销一部',
-    value: 'saleOne'
-  },
-  {
-    title: '营销二部',
-    value: 'saleTwo'
+    title: '营销部',
+    value: 'sale'
   }, 
   {
     title: '设计一部',
@@ -37,6 +33,10 @@ export const GROUPLIST = [
   {
     title: '工程部',
     value: 'project'
+  }, 
+  {
+    title: '行政部',
+    value: 'service'
   }
 ];
 
@@ -65,14 +65,14 @@ export const STATUSLIST = [
     value: 'zhuanhetong',
     color: 'green'
   },
-  {
-    title: '施工',
-    value: 'shigong',
-    color: 'cyan'
-  },
-  {
-    title: '交付',
-    value: 'jiaofu',
-    color: 'blue'
-  },  
+  // {
+  //   title: '施工',
+  //   value: 'shigong',
+  //   color: 'cyan'
+  // },
+  // {
+  //   title: '交付',
+  //   value: 'jiaofu',
+  //   color: 'blue'
+  // },  
 ]

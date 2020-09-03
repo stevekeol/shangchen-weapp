@@ -6,6 +6,7 @@ const clients = [{
     contact: '杜敏', //此处应该是ObejctID
     status: 'yixiang',
     createTime: '2020-08-20 16:30',
+    source: '介绍',
     records: [{
       createTime: '2020-08-20 17:00',
       content: '初次交流装修风格'
@@ -29,6 +30,7 @@ const clients = [{
     contact: '杜敏', //此处应该是ObejctID
     status: 'jiaofu',
     createTime: '2020-08-20 16:30',
+    source: '介绍',
     records: [{
       createTime: '2020-08-20 17:00',
       content: '初次交流装修风格'
@@ -52,6 +54,7 @@ const clients = [{
     contact: '聂碧清', //此处应该是ObejctID
     status: 'yixiang',
     createTime: '2020-08-20 16:30',
+    source: '介绍',
     records: [{
       createTime: '2020-08-20 17:00',
       content: '初次交流装修风格'
@@ -75,6 +78,7 @@ const clients = [{
     contact: '聂碧清', //此处应该是ObejctID
     status: 'dingjin',
     createTime: '2020-08-20 16:30',
+    source: '介绍',
     records: [{
       createTime: '2020-08-20 17:00',
       content: '初次交流装修风格'
@@ -101,7 +105,8 @@ const employees = [{
   password: 'cp_2020',
   avatorUrl: undefined,
   openid: undefined,
-  groups: 'saleAdmin',
+  groups: ['sale'],
+  isAdmin: true,
   createTime: '2020-05-17 18:30',
   updateTime: '2020-05-20 19:30',
   clients: []
@@ -111,7 +116,7 @@ const employees = [{
   password: 'dm_2020',
   avatorUrl: undefined,
   openid: undefined,
-  groups: ['saleOne'],
+  groups: ['sale'],
   isAdmin: true,
   createTime: '2020-05-17 18:30',
   updateTime: '2020-05-20 19:30',
@@ -122,9 +127,64 @@ const employees = [{
   password: 'nbq_2020',
   avatorUrl: undefined,
   openid: undefined,
-  groups: ['saleTwo'],
+  groups: ['sale'],
   isAdmin: true,
   createTime: '2020-05-17 18:30',
   updateTime: '2020-05-20 19:30',
   clients: []
-}]
+}, {
+  name: '鲜涛',
+  phone: 13541969528,
+  password: 'xt_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['designOne'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+}, {
+  name: '尹学文',
+  phone: 18064922265,
+  password: 'yxw_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['project'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+}, {
+  name: '王燕',
+  phone: 13155564000,
+  password: 'wy_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['service'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+}, {
+  name: '鲜涛1',
+  phone: 13541969528,
+  password: 'xt_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['designOne'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+}, {
+  name: '鲜涛2',
+  phone: 13541969528,
+  password: 'xt_2020',
+  avatorUrl: undefined,
+  openid: undefined,
+  groups: ['designTwo'],
+  isAdmin: true,
+  createTime: '2020-05-17 18:30',
+  updateTime: '2020-05-20 19:30',
+  clients: []
+},]

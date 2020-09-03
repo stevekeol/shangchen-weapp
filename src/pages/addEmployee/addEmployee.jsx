@@ -21,7 +21,8 @@ class AddEmployee extends Component {
       phone: '',
       password: '',
       groups: [],
-      isAdmin: false, //是否是group中所有小组的admin
+      isAdmin: false, //是否是groups中所有小组的admin
+      designer: '',
       clients: [],
       createTime: '',
       updateTime: ''
@@ -31,6 +32,8 @@ class AddEmployee extends Component {
     this.getPhone = this.getPhone.bind(this);
     this.getPassword = this.getPassword.bind(this);
     this.onGroupChange = this.onGroupChange.bind(this);
+    this.getDesigner = this.getDesigner.bind(this);
+
     // this.onRoleChange = this.onRoleChange.bind(this);
 
 
@@ -61,6 +64,12 @@ class AddEmployee extends Component {
       password: e.detail.value
     })
   }
+
+  getDesigner(e) {
+    this.setState({
+      designer: e.detail.value
+    })
+  }  
 
   onGroupChange(e) {
     this.setState({
