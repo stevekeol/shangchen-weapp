@@ -23,7 +23,8 @@ class ClientInfo extends Component {
       monthRegister: 22,
       monthDeal: 9,
       employees: [],
-      statusList: ['意向', '定金', '设计', '转合同', '施工', '完结'],
+      statusList: ['意向', '定金', '设计', '转合同'],
+      // statusList: ['意向', '定金', '设计', '转合同', '施工', '完结'],
       status: 0, //0-5
       name: '张杰',
       address: '杭州市余杭区西园3幢3单元',

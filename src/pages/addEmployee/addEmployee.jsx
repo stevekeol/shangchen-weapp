@@ -4,6 +4,7 @@ import { View, Image, Text, Picker, Input, Switch, Label, Checkbox } from '@taro
 import Navbar from '../../components/navbar/navbar'
 import { formatTime  } from '../../utils/date.js'; //ES6风格的导入导出
 import { GROUPLIST  } from '../../utils/config.js'; //ES6风格的导入导出
+import { URL  } from '../../utils/config.js'; //ES6风格的导入导出
 
 //先集中导入colorUI的样式
 import './addEmployee.scss'
@@ -91,6 +92,50 @@ class AddEmployee extends Component {
 
   submit() {
     console.log(this.state);
+
+    // Taro.request({
+    //   // url: `${URL}employee`, //仅为示例，并非真实的接口地址
+    //   url: 'https://www.xuedaojia.net/employee',
+    //   data: {
+    //     "globalData": {
+    //         "role": "admin"
+    //     },
+    //     "employee": {
+            
+    //     }        
+    //   },
+    //   method: 'POST',
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     console.log(res.data)
+    //   }
+    // })
+
+    wx.request({
+      url: 'https://www.xuedaojia.net/employee', //仅为示例，并非真实的接口地址
+      method: 'POST',
+      data: {
+        globalData: {
+          role: 'admin'
+        },
+        employee: {
+          name: 'zhangsan',
+          phone: '15258800907'
+        }
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        console.log(res.data)
+      },
+      fail (err) {
+        console.log(err)
+      }
+    })
+
     //网络请求【待写】
     //1. 增加字段: createTime, updateTime, contact(用me的objectId)
     //2. 保存时还得根据手机号查询再保存
